@@ -209,8 +209,6 @@ figure {
     padding: 20px;
     grid-column: 1/2;
     position:relative;
-    top:90px;
-    left:10px;
     z-index: auto;
   }
   .site-footer{
@@ -231,8 +229,37 @@ figure {
     background-image: none;
   }
   .site-logo {
-    position: fixed;
-    grid-row: 1/2;
+    position: relative;
+    display: inline-block;
     top:10px;
     left:20px;
+  }
+
+@media screen and (min-width:992px) {
+  main{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .movie:first-child{
+    grid-column: 1/4;
+  }
+  .movie:first-child .movie-poster {
+    display: none;
+  }
+  .movie:first-child .movie-backdrop {
+    display: block;
+  }
+  .movie:first-child .movie-overview {
+    display: block;
+  }
+
+  .movie-poster{
+    display: block;
+  }
+  .movie-overview{
+    display: none;
+  }
+  .movie-backdrop{
+    display: none;
+  }
   }
